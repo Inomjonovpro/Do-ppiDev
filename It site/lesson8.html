@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3-Dars: OOP (Ob'ektga yo'naltirilgan dasturlash)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>8-Dars: OOP (Ob'ektga yo'naltirilgan dasturlash)</h1>
+        
+        <h2>Ob'ektlar</h2>
+        <p>
+            OOP (Ob'ektga yo'naltirilgan dasturlash) dasturlash uslubi bo'lib, 
+            unda dastur ob'ektlar orqali tashkil etiladi. Har bir ob'ekt o'z 
+            xususiyatlari (data) va metodlari (funksiyalar) bilan birga keladi.
+        </p>
+
+        <h2>Sinf (Class)</h2>
+        <p>
+            Sinf - bu ob'ektlar yaratish uchun shablon. Sinf ichida biz 
+            ob'ektlarning xususiyatlarini va metodlarini aniqlaymiz. Masalan:
+        </p>
+        <pre><code>class Avtomobil:
+    def __init__(self, model, rang):
+        self.model = model
+        self.rang = rang
+
+    def ma'lumotlar(self):
+        return f"{self.model} model, {self.rang} rang."</code></pre>
+
+        <h2>Ob'ektlarni yaratish</h2>
+        <p>
+            Yuqoridagi sinfdan ob'ekt yaratish uchun, biz quyidagicha 
+            sintaksisdan foydalanamiz:
+        </p>
+        <pre><code>my_car = Avtomobil("BMW", "qora")
+print(my_car.ma'lumotlar())</code></pre>
+
+        <h2>Merosi</h2>
+        <p>
+            OOP-da meros olish orqali biz bir sinfdan boshqa sinfga 
+            xususiyatlarni o'zlashtirishimiz mumkin. Bu kodni 
+            ko'ring:
+        </p>
+        <pre><code>class SportAvtomobil(Avtomobil):
+    def __init__(self, model, rang, tezlik):
+        super().__init__(model, rang)
+        self.tezlik = tezlik
+
+    def ma'lumotlar(self):
+        return f"{self.model} model, {self.rang} rang, tezligi: {self.tezlik} km/soat."</code></pre>
+
+        <h2>Polimorfizm</h2>
+        <p>
+            Polimorfizm - bu bir xil metod nomi turli xil ob'ektlar 
+            tomonidan turli xil xulq-atvorini belgilash imkonini beradi. 
+            Masalan:
+        </p>
+        <pre><code>class YengilAvtomobil(Avtomobil):
+    def ma'lumotlar(self):
+        return f"{self.model} yengil avtomobil."
+
+class Og'irAvtomobil(Avtomobil):
+    def ma'lumotlar(self):
+        return f"{self.model} og'ir avtomobil."</code></pre>
+
+        <p>
+            Bu yerda `YengilAvtomobil` va `Og'irAvtomobil` sinflari 
+            o'zlarining `ma'lumotlar` metodlarini o'ziga xos 
+            tarzda belgilaydi.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson7.html" class="button">Ortga qaytish</a>
+        <a href="lesson9.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

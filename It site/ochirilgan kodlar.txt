@@ -1,0 +1,8 @@
+index.html ichidaki python kursi ochirildi ocgirilgan ko'd: 
+
+ <div class="card">
+            <img src="python-logo.png" alt="Python Logo" class="language-logo">
+            <h3>Python</h3>
+            <p>Dasturlash asoslarini o'rganing</p>
+            <button onclick="startCourse('python')">Boshlash</button>
+        </div>

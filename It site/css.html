@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Darslari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        /* Tepadagi menyu */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* CSS haqida bo'lim */
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        #content h1 {
+            font-size: 2.5em;
+        }
+        .css-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4; /* Oq emas, biroz kul rang */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kartochkaga soya qo'shildi */
+        }
+        .css-info img {
+            float: left;
+            margin-right: 20px;
+            width: 150px;
+        }
+        .css-info p {
+            color: #333; /* Matn rangi qoraroq bo'ldi */
+        }
+
+        /* Darslar haqida matn */
+        .announcement {
+            font-size: 2em; /* Kattaroq matn o'lchami */
+            color: #ff5722; /* Rangni o'zgartirdik */
+            animation: bounce 1.5s infinite; /* Doimiy yoqimli animatsiya */
+            margin-top: 20px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Footerni sahifaning pastiga o'rnatish */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Footer har doim pastda bo'lishini ta'minlaydi */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <!-- CSS haqida bo'lim -->
+    <section id="content">
+        <h1>CSS Dasturlash Kursi</h1>
+
+        <div class="css-info">
+            <img src="css-logo.png" alt="CSS Logo">
+            <p>
+                CSS (Cascading Style Sheets) - bu web sahifalarning ko'rinishini boshqarish uchun ishlatiladigan dasturlash tili. CSS, HTML bilan birga, web dasturlashning asosiy komponentlaridan biridir. CSS 1996-yilda W3C tomonidan yaratilgan.
+            </p>
+            <p>
+                CSS yordamida siz web sahifalarning ranglarini, shriftlarini, maketini va boshqa ko'plab dizayn elementlarini belgilashingiz mumkin. CSS, elementlar o'rtasidagi masofalarni, o'lchamlarni va shakllarni boshqarish imkonini beradi.
+            </p>
+            <p>
+                CSS ning yangi versiyalari (CSS3) ko'plab yangi imkoniyatlarni, jumladan, animatsiyalar, gradientlar va media queries qo'shishni ta'minlaydi.
+            </p>
+        </div>
+
+        <p class="announcement">Darslar yaqin orada qo'shiladi!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Bilan Tanishing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ffebee, #e3f2fd);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soya efekti */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>CSS Bilan Tanishing</h1>
+
+        <h2>CSS Nima?</h2>
+        <p>
+            CSS (Cascading Style Sheets) veb-sahifalarning ko'rinishini boshqarish uchun ishlatiladigan uslub varaqasidir. CSS yordamida siz matnning rangi, fon rangi, joylashuvi va boshqa ko'plab uslublarni belgilashingiz mumkin.
+        </p>
+
+        <h2>CSS Misoli</h2>
+        <p>CSS yordamida veb-sahifalarning ko'rinishini o'zgartirish mumkin. Quyida HTML va CSS orqali yaratilgan misol rasmga qarang:</p>
+        
+        <img src="html_bilan.png" alt="HTML Sayti" />
+        <p>Ushbu rasm HTML yordamida yaratilgan oddiy sahifani ko'rsatadi.</p>
+
+        <img src="html_css.png" alt="HTML va CSS Bilan Yozilgan Sayt" />
+        <p>Ushbu rasm HTML va CSS yordamida yanada chiroyli ko'rinishga ega sahifani ko'rsatadi.</p>
+
+        <h2>CSSdan Foydalanish</h2>
+        <p>
+            CSS yordamida siz veb-sahifangizga ko'plab uslublar qo'shishingiz mumkin, masalan, fon rangi, matn rangi, shrifti, margin va padding kabi xususiyatlar.
+        </p>
+        <p>Misol uchun:</p>
+        <pre><code>body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}</code></pre>
+    </div>
+
+    <div class="button-container">
+        <a href="htmllesson3.html" class="button">Oldingi dars</a>
+        <a href="htmllesson6.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

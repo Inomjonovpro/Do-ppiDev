@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 6-Dars: For Tsikli (For Loop)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #f0f4c3, #dcedc8);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #7cb342;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #558b2f;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>6-Dars: For Tsikli (For Loop)</h1>
+
+        <h2>For Tsikli nima?</h2>
+        <p>
+            For tsikli (loop) - bu kodni bir necha marta takrorlashni (repeat) xohlaysizmi? For tsikli bu vazifani bajaradi! 
+        </p>
+        <p>
+            Masalan, siz 10 marta salom yozishni xohlasangiz, 10 marta kod yozish o‘rniga for tsikldan foydalanishingiz mumkin.
+        </p>
+
+        <h2>For Tsikli qanday ishlaydi?</h2>
+        <p>
+            For tsikli qator (sequence) ichidagi har bir narsani ketma-ket oladi va kodni bajaradi. Masalan, ro‘yxatdagi (list) barcha elementlarni chiqarib berishi mumkin.
+        </p>
+
+        <pre><code>mevalar = ["olma", "banan", "gilos"]  # ro'yxat
+for meva in mevalar:  # for tsikli orqali har bir meva olinadi
+    print(meva)</code></pre>
+
+        <p>Yuqoridagi misolda <code>for</code> tsikli ro‘yxatdagi har bir mevani navbatma-navbat olib, ekranga chiqaradi.</p>
+
+        <h2>Range() funksiyasi bilan tsikldan foydalanish</h2>
+        <p>
+            Agar siz sonlar bilan ishlashni xohlasangiz, <code>range()</code> funksiyasidan foydalanishingiz mumkin. <code>range()</code> - bu ma'lum bir oraliqdagi sonlarni yaratadi.
+        </p>
+
+        <pre><code>for son in range(5):  # 0 dan 4 gacha sonlarni oladi
+    print(son)</code></pre>
+
+        <p>
+            Bu yerda <code>range(5)</code> 0 dan 4 gacha (5 soni kiritilmaydi) sonlarni oladi va <code>for</code> tsikli ularni ekranga chiqaradi.
+        </p>
+
+        <h2>For Tsikli va Indekslar</h2>
+        <p>
+            Agar siz ro‘yxatdagi har bir elementning qaysi raqamda (index) turganini bilmoqchi bo‘lsangiz, <code>enumerate()</code> funksiyasidan foydalanishingiz mumkin.
+        </p>
+
+        <pre><code>mevalar = ["olma", "banan", "gilos"]
+for indeks, meva in enumerate(mevalar):
+    print(f"{indeks}: {meva}")  # indeks va meva chiqariladi</code></pre>
+
+        <p>Bu kod ro‘yxatdagi har bir mevani uning indeks raqami bilan birga chiqaradi.</p>
+
+        <h2>For Tsiklida 'break' va 'continue'</h2>
+        <p>
+            Agar tsiklni to‘xtatmoqchi bo‘lsangiz, <code>break</code> so‘zidan foydalaning. Agar tsiklning bir qismini o‘tkazib yubormoqchi bo‘lsangiz, <code>continue</code> so‘zidan foydalaning.
+        </p>
+
+        <pre><code>for son in range(10):
+    if son == 5:
+        break  # tsikl to'xtaydi
+    print(son)</code></pre>
+
+        <p>Bu kodda tsikl 5 ga yetganda to‘xtaydi va qolgan sonlar chiqarilmaydi.</p>
+
+        <pre><code>for son in range(10):
+    if son == 5:
+        continue  # 5 soni chiqarilmaydi, o‘tkazib yuboriladi
+    print(son)</code></pre>
+
+        <p>Bu kodda esa 5 soni o‘tkazib yuboriladi, lekin qolgan barcha sonlar chiqariladi.</p>
+
+        <h2>Misol (Example)</h2>
+        <p>Keling, for tsiklidan foydalanib oddiy misol yozamiz:</p>
+
+        <pre><code>for son in range(1, 11):
+    print(f"{son} * 2 = {son * 2}")  # har bir sonni 2 ga ko'paytirish</code></pre>
+
+        <p>Bu yerda biz 1 dan 10 gacha sonlarni olib, ularni 2 ga ko‘paytirib natijani chiqaramiz.</p>
+
+        <h2>Xulosa</h2>
+        <p>
+            For tsikli Python dasturlash tilida juda muhim bo‘lib, u sizga kodni takrorlashni osonlashtiradi. Keyingi darsimizda <b>while tsikli</b> haqida bilib olamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson5.html" class="button">Ortga qaytish</a>
+        <a href="lesson7.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 4-Dars: Shart Operatorlari va Sikllar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #fce4ec, #f8bbd0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #c2185b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #d81b60;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>4-Dars: Shart Operatorlari va Sikllar</h1>
+
+        <h2>Shart Operatorlari (if, elif, else)</h2>
+        <p>
+            Shart operatorlari (condition operators) yordamida dasturda turli qarorlar qabul qilish mumkin. Bu degani, biz turli vaziyatlarga qarab (based on different conditions), dasturga qaysi yo'nalishda ishlash kerakligini ko'rsatamiz.
+        </p>
+        <p>
+            Python tilida <code>if</code> (agar), <code>elif</code> (aks holda agar), va <code>else</code> (aks holda) operatorlari mavjud. Ular shartlar (conditions) bajarilishiga qarab qanday kodni bajarish kerakligini aniqlaydi.
+        </p>
+
+        <pre><code>x = 10
+
+if x > 5:  # agar x 5 dan katta bo'lsa
+    print("x 5 dan katta")  # shu xabarni chiqaradi
+elif x == 5:  # aks holda agar x 5 ga teng bo'lsa
+    print("x 5 ga teng")  # shu xabarni chiqaradi
+else:  # yuqoridagi shartlar bajarilmasa
+    print("x 5 dan kichik")  # shu xabarni chiqaradi</code></pre>
+
+        <p>Yuqoridagi kodda dastur <code>x</code> o'zgaruvchisini (variable) tekshiradi va qaysi shart (condition) bajarilsa, shu bo'limni ishlaydi.</p>
+
+        <h2>Sikllar (for, while)</h2>
+        <p>
+            Sikllar (loops) dasturda biror bir ishni bir necha marta takrorlash (repeat) uchun ishlatiladi. Python tilida <code>for</code> (uchun) va <code>while</code> (bo'lganda) sikllari mavjud.
+        </p>
+
+        <h3>For Sikli (for loop)</h3>
+        <p><code>for</code> sikli biror ro'yxat (list) yoki qator (range) elementlarini ketma-ket aylantiradi (iterate).</p>
+
+        <pre><code>for i in range(5):  # i 0 dan 4 gacha qiymat oladi
+    print(i)  # har safar i ni chiqaradi</code></pre>
+
+        <p>Yuqoridagi kodda <code>i</code> o'zgaruvchisi 0 dan 4 gacha bo'lgan qiymatlarni (values) oladi va har safar <code>print(i)</code> orqali ekranga chiqariladi.</p>
+
+        <h3>While Sikli (while loop)</h3>
+        <p><code>while</code> sikli berilgan shart (condition) bajarilganicha davom etadi (continue).</p>
+
+        <pre><code>i = 0
+
+while i < 5:  # i 5 dan kichik bo'lganda davom etadi
+    print(i)  # i ni chiqaradi
+    i += 1  # i ni 1 ga oshiradi</code></pre>
+
+        <p>Bu kodda <code>i</code> 0 dan 4 gacha bo'lgan qiymatlarni oladi va har safar 1 ga oshiriladi.</p>
+
+        <h2>Misol (Example)</h2>
+        <p>Quyida shart operatorlari va sikllar birgalikda ishlatilgan oddiy misol keltirilgan:</p>
+
+        <pre><code>for i in range(1, 11):  # 1 dan 10 gacha bo'lgan sonlar uchun
+    if i % 2 == 0:  # agar i juft bo'lsa
+        print(f"{i} juft son")  # juft son deb chiqaradi
+    else:  # aks holda
+        print(f"{i} toq son")  # toq son deb chiqaradi</code></pre>
+
+        <p>Bu kod 1 dan 10 gacha bo'lgan sonlarni tekshiradi va ularning juft (even) yoki toq (odd) ekanligini aniqlaydi.</p>
+
+        <h2>Keyingi darslar (Next lessons)</h2>
+        <p>
+            Keyingi darsda funksiyalar (functions) va ularning qanday ishlatilishi haqida bilib olamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson3.html" class="button">Ortga qaytish</a>
+        <a href="lesson5.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

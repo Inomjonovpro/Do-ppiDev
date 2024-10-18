@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 14-Dars: Sodda Dasturlar Yaratish</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>14-Dars: Sodda Dasturlar Yaratish</h1>
+
+        <h2>Python orqali sodda dasturlar yaratish</h2>
+        <p>
+            Bu darsda siz oddiy Python dasturlarini yaratishni o'rganasiz. O'zingiz ishlatishingiz mumkin bo'lgan oddiy dasturlar misollari bilan tanishamiz, masalan, kalkulyator, raqam taxmin qilish o'yini va boshqalar.
+        </p>
+
+        <h2>Kerakli kutubxonalarni o'rnatish</h2>
+        <p>
+            Dasturlarni yaratishda foydali kutubxonalar kerak bo'lishi mumkin. Agar dasturning ishlashi uchun kutubxonalar kerak bo'lsa, ularni quyidagi tarzda o'rnatishingiz mumkin:
+        </p>
+
+        <p><strong>Kutubxonalarni o'rnatish:</strong> Terminal yoki buyruqlar satriga quyidagi buyruqlarni kiriting:</p>
+
+        <pre><code>pip install requests</code></pre>
+        <pre><code>pip install random</code></pre>
+
+        <p><strong>requests</strong> moduli API bilan ishlash uchun, <strong>random</strong> moduli esa tasodifiy raqamlar yaratish uchun ishlatiladi.</p>
+
+        <h2>Oddiy Kalkulyator Dasturi</h2>
+        <p>
+            Quyida oddiy kalkulyator dasturining kodi keltirilgan. Bu dastur foydalanuvchidan ikkita son va amalni so'raydi va natijani hisoblaydi.
+        </p>
+
+        <pre><code>def kalkulyator():
+    birinchi_son = float(input("Birinchi sonni kiriting: "))
+    ikkinchi_son = float(input("Ikkinchi sonni kiriting: "))
+    amal = input("Amalni tanlang (+, -, *, /): ")
+
+    if amal == "+":
+        print(f"Natija: {birinchi_son + ikkinchi_son}")
+    elif amal == "-":
+        print(f"Natija: {birinchi_son - ikkinchi_son}")
+    elif amal == "*":
+        print(f"Natija: {birinchi_son * ikkinchi_son}")
+    elif amal == "/":
+        if ikkinchi_son != 0:
+            print(f"Natija: {birinchi_son / ikkinchi_son}")
+        else:
+            print("Bo'lish amali nolga bo'lish mumkin emas!")
+    else:
+        print("Noto'g'ri amal tanlandi!")
+
+if __name__ == "__main__":
+    kalkulyator()
+</code></pre>
+
+        <h2>Random Raqam Topish O'yini</h2>
+        <p>
+            Ushbu dasturda kompyuter tasodifiy raqam tanlaydi va foydalanuvchi o'sha raqamni topishi kerak bo'ladi.
+        </p>
+
+        <pre><code>import random
+
+def raqam_top():
+    max_son = 100
+    tasodifiy_son = random.randint(1, max_son)
+    taxminlar = 0
+    taxmin = -1
+
+    while taxmin != tasodifiy_son:
+        taxmin = int(input(f"1 dan {max_son} gacha son kiriting: "))
+        taxminlar += 1
+        if taxmin < tasodifiy_son:
+            print("Ko'proq bo'lishi kerak.")
+        elif taxmin > tasodifiy_son:
+            print("Kamroq bo'lishi kerak.")
+    
+    print(f"Tabriklaymiz! Siz {taxminlar} taxmin bilan to'g'ri topdingiz!")
+
+if __name__ == "__main__":
+    raqam_top()
+</code></pre>
+
+        <h2>Vaqt va Sana Ko'rsatuvchi Dastur</h2>
+        <p>
+            Quyidagi dastur hozirgi vaqt va sanani ko'rsatadi. Bu <code>datetime</code> kutubxonasi yordamida amalga oshiriladi.
+        </p>
+
+        <pre><code>import datetime
+
+def vaqt_va_sana():
+    hozirgi_vaqt = datetime.datetime.now()
+    print("Hozirgi vaqt va sana:", hozirgi_vaqt)
+
+if __name__ == "__main__":
+    vaqt_va_sana()
+</code></pre>
+
+        <h2>API bilan Ma'lumot Olish Dasturi</h2>
+        <p>
+            Ushbu dasturni yaratishda <code>requests</code> kutubxonasidan foydalanib, internetdan ma'lumotlar olamiz. Masalan, ob-havo ma'lumotlarini olish.
+        </p>
+
+        <pre><code>import requests
+
+def ob_havo():
+    shahar = input("Shahar nomini kiriting: ")
+    api_url = f"http://api.openweathermap.org/data/2.5/weather?q={shahar}&appid=SIZNING_API_KALITingiz"
+    
+    javob = requests.get(api_url)
+    if javob.status_code == 200:
+        data = javob.json()
+        print(f"Shahar: {data['name']}, Harorat: {data['main']['temp']} K")
+    else:
+        print("Ma'lumot topilmadi!")
+
+if __name__ == "__main__":
+    ob_havo()
+</code></pre>
+
+        <h2>Keyingi Qadamlar</h2>
+        <p>
+            Endi siz oddiy dasturlar yaratishni o'rgandingiz. Keyingi darslarda murakkabroq dasturlar va ular uchun kerakli kutubxonalar bilan tanishasiz. Dasturlarni yanada murakkablashtirib, amaliy loyihalar yaratishni boshlashingiz mumkin!
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson13.html" class="button">Ortga qaytish</a>
+        <a href="lesson15.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

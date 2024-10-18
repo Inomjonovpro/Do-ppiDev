@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 15-Dars: Mashina O'rganish Tushunchalari</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>15-Dars: Mashina O'rganish Tushunchalari</h1>
+
+        <h2>Mashina o'rganishga kirish</h2>
+        <p>
+            Mashina o'rganish — kompyuterning inson yordamisiz o'z tajribasidan o'rganishi va ma'lumotlarni qayta ishlashi imkonini beradi. Python'da mashina o'rganishni o'rganish uchun sizga bir nechta mashhur kutubxonalar kerak bo'ladi.
+        </p>
+
+        <h2>Kerakli kutubxonalar</h2>
+        <p>
+            Python orqali mashina o'rganish modellarini yaratish uchun quyidagi kutubxonalarni o'rnating:
+        </p>
+
+        <pre><code>pip install numpy
+pip install pandas
+pip install scikit-learn
+pip install matplotlib</code></pre>
+
+        <ul>
+            <li><strong>NumPy:</strong> Sonli hisoblashlar uchun asosiy kutubxona.</li>
+            <li><strong>Pandas:</strong> Ma'lumotlarni tahlil qilish va ularni qayta ishlash uchun ishlatiladi.</li>
+            <li><strong>Scikit-learn:</strong> Mashina o'rganish modellarini yaratish uchun kutubxona.</li>
+            <li><strong>Matplotlib:</strong> Ma'lumotlarni grafik ko'rinishda tasvirlash uchun ishlatiladi.</li>
+        </ul>
+
+        <h2>Oddiy Ma'lumotlar Tahlili</h2>
+        <p>
+            Quyida Pandas yordamida ma'lumotlarni tahlil qilishning oddiy namunasi keltirilgan. Pandas yordamida CSV formatidagi fayllarni o'qib, ularni qayta ishlash mumkin.
+        </p>
+
+        <pre><code>import pandas as pd
+
+# CSV faylini o'qish
+data = pd.read_csv('example.csv')
+
+# Birinchi 5 qatorni ko'rsatish
+print(data.head())</code></pre>
+
+        <h2>Oddiy Regression Modeli</h2>
+        <p>
+            Quyidagi misolda scikit-learn kutubxonasi yordamida oddiy regression modeli yaratiladi.
+        </p>
+
+        <pre><code>from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Ma'lumotlarni yaratish
+x = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = np.array([2, 4, 6, 8, 10])
+
+# Modelni yaratish
+model = LinearRegression()
+model.fit(x, y)
+
+# Bashorat qilish
+predictions = model.predict(x)
+print("Bashoratlar:", predictions)</code></pre>
+
+        <h2>Ma'lumotlarni Vizualizatsiya Qilish</h2>
+        <p>
+            Ma'lumotlarni vizualizatsiya qilish uchun Matplotlib kutubxonasidan foydalanamiz.
+        </p>
+
+        <pre><code>import matplotlib.pyplot as plt
+
+# Ma'lumotlarni chizish
+plt.plot(x, y, label='Asl ma\'lumotlar')
+plt.plot(x, predictions, label='Bashorat qilingan')
+plt.xlabel('X qiymatlari')
+plt.ylabel('Y qiymatlari')
+plt.title('Regression modeli')
+plt.legend()
+plt.show()</code></pre>
+
+        <h2>Keyingi Qadamlar</h2>
+        <p>
+            Bu darsda siz mashina o'rganishning asosiy tushunchalarini o'rgangansiz. Keyingi darslarda mashina o'rganish modellarini yanada chuqurroq o'rganish va amaliyotda qanday qo'llashni ko'rasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson14.html" class="button">Ortga qaytish</a>
+        <a href="lesson16.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

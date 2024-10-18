@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 2-Dars: HTML Hujjatining Asosiy Tuzilishi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #f3e5f5, #e8eaf6);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #8e24aa;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ab47bc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>HTML 2-Dars: HTML Hujjatining Asosiy Tuzilishi</h1>
+        <h2>HTML hujjatining tuzilishi</h2>
+        <p>
+            HTML hujjatlari <b>teglar</b> yordamida yoziladi. Har bir HTML hujjati quyidagi asosiy qismlarga ega:
+        </p>
+        <ul>
+            <li><b>&lt;!DOCTYPE html&gt;</b> — HTML5 hujjat ekanligini ko'rsatadi.</li>
+            <li><b>&lt;html&gt;</b> — HTML hujjatining boshlanishi.</li>
+            <li><b>&lt;head&gt;</b> — Sahifaning bosh qismi, unda meta ma'lumotlar, sahifa nomi va uslublar ko'rsatiladi.</li>
+            <li><b>&lt;body&gt;</b> — Sahifaning asosiy tarkibi joylashadigan qism.</li>
+        </ul>
+
+        <h2>Asosiy teglar bilan ishlash</h2>
+        <p>
+            Har bir HTML hujjati <b>&lt;html&gt;</b> va <b>&lt;/html&gt;</b> teglar orasida joylashadi. Hujjatning ikki muhim qismi bor: <b>head</b> va <b>body</b>. <br>
+            Keling, birgalikda har birini ko'rib chiqamiz.
+        </p>
+
+        <h3>&lt;!DOCTYPE html&gt; va &lt;html&gt; tegi</h3>
+        <p>
+            Hujjatning eng boshida biz <b>&lt;!DOCTYPE html&gt;</b> yozamiz. Bu HTML5 standartiga mosligini bildiradi. 
+            Quyida esa <b>&lt;html&gt;</b> tegi bilan hujjatni boshlaymiz. Misol:
+        </p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>&lt;head&gt; tegi</h3>
+        <p>
+            <b>&lt;head&gt;</b> qismi sahifaga kiruvchi meta ma'lumotlarni saqlaydi. Unda sahifaning nomi (<b>&lt;title&gt;</b>), belgilar kodirovkasi (<b>&lt;meta charset="UTF-8"&gt;</b>) va boshqa meta ma'lumotlar joylashadi. 
+            Quyida kichik misol:
+        </p>
+
+        <pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mening Sahifam&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+
+        <h3>&lt;body&gt; tegi</h3>
+        <p>
+            Asosiy ma'lumotlarni <b>&lt;body&gt;</b> tegida yozamiz. Bu yerda veb-sahifada ko'rinadigan matn, rasmlar, tugmalar va boshqa elementlar joylashadi. Misol uchun:
+        </p>
+
+        <pre><code>&lt;body&gt;
+    &lt;h1&gt;Bu asosiy sarlavha&lt;/h1&gt;
+    &lt;p&gt;Bu esa oddiy paragraf.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+        <h2>To'liq hujjat misoli</h2>
+        <p>Quyida to'liq HTML hujjat misolini ko'rishingiz mumkin:</p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mening Birinchi Sahifam&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Salom, Dunyo!&lt;/h1&gt;
+    &lt;p&gt;Bu mening birinchi HTML sahifam.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Ushbu hujjatni yaratib, brauzerda ochsangiz, sahifada "Salom, Dunyo!" degan matn va oddiy paragrafni ko'rasiz.</p>
+    </div>
+
+    <div class="button-container">
+        <a href="htmllesson1.html" class="button">Oldingi dars</a>
+        <a href="htmllesson3.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

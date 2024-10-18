@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dizayn Asoslari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e3f2fd, #fce4ec);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin-right: 0;
+            }
+
+            .button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Responsive Dizayn Asoslari</h1>
+
+        <div class="section">
+            <h2>Responsive Dizayn Nima?</h2>
+            <p>Responsive dizayn – bu veb-sahifalarning turli ekran o'lchamlari va qurilmalarda yaxshi ko'rinishini ta'minlash uchun ishlatiladigan usuldir. Bu, saytni mobil telefonlardan tortib, planshetlar va kompyuterlarga moslashtirish imkonini beradi.</p>
+        </div>
+
+        <div class="section">
+            <h2>Media Queries</h2>
+            <p>Media queries yordamida sahifa dizaynini turli o'lchamlar uchun sozlash mumkin. Masalan:</p>
+            <pre><code>@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Flexbox va Grid</h2>
+            <p>Flexbox va CSS Grid yordamida responsive dizayn yaratish juda oson. Ular elementlarni ekran o'lchamiga qarab joylashtirish imkonini beradi.</p>
+        </div>
+
+        <div class="section">
+            <h2>Responsive Rasmlar</h2>
+            <p>Responsive rasmlar uchun <code>srcset</code> atributidan foydalanish mumkin. Bu, brauzerga qaysi rasmni yuklashini aniqlashga yordam beradi:</p>
+            <pre><code>&lt;img src="small.jpg" srcset="medium.jpg 640w, large.jpg 1280w" alt="Responsive rasm"&gt;</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Amaliy Misol</h2>
+            <p>Responsive dizaynni yaratish uchun oddiy bir misol:</p>
+            <pre><code>&lt;div style="display: flex; flex-wrap: wrap;"&gt;
+    &lt;div style="flex: 1 1 300px;"&gt;1&lt;/div&gt;
+    &lt;div style="flex: 1 1 300px;"&gt;2&lt;/div&gt;
+    &lt;div style="flex: 1 1 300px;"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="htmllesson7.html" class="button">Oldingi dars</a>
+        <a href="htmllesson9.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

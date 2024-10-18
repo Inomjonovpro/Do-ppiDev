@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 1-Dars: Python va Visual Studio Code o'rnatish</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>1-Dars: Python va Visual Studio Code o'rnatish</h1>
+        <h2>Pythonni o'rnatish</h2>
+        <p>
+            Python dasturlash tilini o'rnatish juda oson. Pythonning rasmiy veb-sayti <a href="https://www.python.org/downloads/">bu yerda</a> mavjud. 
+            O'z operatsion tizimingizga mos versiyasini yuklab olib, o'rnating. 
+        </p>
+
+        <div class="image-container">
+            <img src="python_installation_guide.png" alt="Python o'rnatish jarayoni">
+            <p>Python o'rnatish jarayonining ko'rinishi.</p>
+        </div>
+
+        <h2>Visual Studio Code (VS Code) o'rnatish</h2>
+        <p>
+            Visual Studio Code — bu Python va boshqa dasturlash tillarida dasturlash uchun juda qulay muharrir. 
+            Uni <a href="https://code.visualstudio.com/download">bu yerda</a> yuklab olishingiz mumkin. 
+            Yuklab olgach, o'rnatish uchun quyidagi ko'rsatmalarga amal qiling:
+        </p>
+
+        <ol>
+            <li>Yuklab olish tugagandan so'ng, yuklangan faylni oching va o'rnatishni boshlang.</li>
+            <li>O'rnatish paytida "Add to PATH" opsiyasini tanlashni unutmang. Bu Python bilan ishlashni osonlashtiradi.</li>
+            <li>O'rnatish tugagandan so'ng, Visual Studio Code-ni ishga tushiring.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="vscode_installation.png" alt="Visual Studio Code o'rnatish jarayoni">
+            <p>Visual Studio Code o'rnatish jarayoni.</p>
+        </div>
+
+        <h2>Python kengaytmasini o'rnatish</h2>
+        <p>
+            Visual Studio Code'ga Python bilan ishlash uchun kerakli kengaytmani o'rnatishingiz lozim. 
+            Buning uchun quyidagi qadamlarni bajaring:
+        </p>
+
+        <ol>
+            <li>Visual Studio Code'da chap tomondagi plaginlar belgisi (<strong>Extensions</strong>) ni bosing.</li>
+            <li>Qidiruv qutisiga "Python" yozing va Microsoft tomonidan ishlab chiqilgan Python kengaytmasini o'rnating.</li>
+            <li>O'rnatish tugagandan so'ng, dasturingiz Python bilan ishlashga tayyor.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="vscode_python_extension.png" alt="Python kengaytmasi">
+            <p>Visual Studio Code'da Python kengaytmasini o'rnatish.</p>
+        </div>
+
+        <h2>Python bilan dastur yozish</h2>
+        <p>
+            Visual Studio Code o'rnatilgan va Python kengaytmasi qo'shilgan bo'lsa, dasturingizni yozishga tayyorsiz. 
+            Quyidagi kodni VS Code'da yozib ko'ring:
+        </p>
+
+        <pre><code>print("Salom, Dunyo!")</code></pre>
+
+        <p>
+            Kodni saqlang va <strong>.py</strong> kengaytmasi bilan nomlang (masalan, <strong>hello.py</strong>). 
+            Keyin terminalda <strong>python hello.py</strong> komandasini ishga tushiring.
+        </p>
+
+        <div class="image-container">
+            <img src="python_hello_world.png" alt="VS Code'da Python 'Hello World' natijasi">
+            <p>VS Code'da Python dasturining chiqishi: "Salom, Dunyo!"</p>
+        </div>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda o'zgaruvchilar, ma'lumot turlari va dasturlash printsiplari bilan tanishasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="python.html" class="button">Ortga qaytish</a>
+        <a href="lesson2.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

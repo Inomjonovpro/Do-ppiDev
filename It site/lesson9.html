@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 9-Dars: Funktsiyalar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e1f5fe, #b3e5fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>9-Dars: Funktsiyalar</h1>
+        <h2>Funktsiya nima?</h2>
+        <p>
+            Funktsiyalar — bu biror amallarni bajarish uchun yozilgan kod bo'laklaridir. Ular kodni qayta ishlatish imkonini beradi va dasturiy ta'minotni boshqarishni osonlashtiradi.
+        </p>
+
+        <h2>Funktsiyani qanday yaratish?</h2>
+        <p>
+            Funktsiyani yaratish uchun <code>def</code> kalit so'zidan foydalanamiz. Quyida oddiy funktsiya misoli keltirilgan:
+        </p>
+
+        <pre><code>def salom_ber():
+    print("Salom, Dunyo!")</code></pre>
+
+        <p>Ushbu kodda <code>salom_ber</code> nomli funktsiya yaratilgan va u chaqirilganda "Salom, Dunyo!" matnini chiqaradi.</p>
+
+        <h2>Funktsiyani chaqirish</h2>
+        <p>Funktsiyani chaqirish uchun uning nomini yozib, qavs ochish va yopishimiz kerak:</p>
+
+        <pre><code>salom_ber()</code></pre>
+
+        <h2>Parametrlar va argumentlar</h2>
+        <p>
+            Funktsiyalarga parametrlar qo'shish mumkin. Quyida parametrli funktsiya misoli keltirilgan:
+        </p>
+
+        <pre><code>def salom_ber(isim):
+    print(f"Salom, {isim}!")</code></pre>
+
+        <p>Ushbu funktsiyani chaqirganda nom berishimiz kerak:</p>
+
+        <pre><code>salom_ber("Muhammadamin")</code></pre>
+
+        <p>Natija:</p>
+        <pre><code>Salom, Muhammadamin!</code></pre>
+
+        <h2>Funktsiyalardan qaytarish qiymati</h2>
+        <p>
+            Funktsiyalardan qiymat qaytarish uchun <code>return</code> kalit so'zidan foydalanamiz. Quyida misol keltirilgan:
+        </p>
+
+        <pre><code>def qo'sh(x, y):
+    return x + y</code></pre>
+
+        <p>Bu funktsiyani chaqirish orqali natijani olishimiz mumkin:</p>
+
+        <pre><code>natija = qo'sh(5, 10)
+print(natija)</code></pre>
+
+        <p>Natija:</p>
+        <pre><code>15</code></pre>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda funktsiyalarning murakkab variantlari va lamda funktsiyalar bilan tanishasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson8.html" class="button">Ortga qaytish</a>
+        <a href="lesson10.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

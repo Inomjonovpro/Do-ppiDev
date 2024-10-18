@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 12-Dars: Avtomatlashtirish (pytest)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ffe5b4, #ffccbc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff7043;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>12-Dars: Avtomatlashtirish (pytest)</h1>
+
+        <h2>Avtomatlashtirish nima?</h2>
+        <p>
+            Avtomatlashtirish, dasturlar va jarayonlarni test qilishni avtomatik tarzda bajarish jarayonidir. Bu, dasturiy ta'minotni yanada sifatli qilish uchun muhimdir.
+        </p>
+
+        <h2>pytest kutubxonasi</h2>
+        <p>
+            <code>pytest</code> — Python dasturlarini test qilish uchun keng tarqalgan kutubxona. Bu kutubxona sintaksis va xususiyatlari bilan juda qulay.
+        </p>
+
+        <h2>Asosiy xususiyatlar</h2>
+        <p>
+            - Oson o'rnatish va ishlatish.<br>
+            - Testlarni modul va sinf sifatida yozish.<br>
+            - Turli darajadagi testlarni yozish (unit testlar, funksional testlar va boshqalar).
+        </p>
+
+        <h2>pytest ni o'rnatish</h2>
+        <p>
+            Python'da kutubxonalardan foydalanish uchun avval ularni o'rnatish kerak bo'ladi. `pytest` kutubxonasini o'rnatish uchun terminal yoki buyruq satrida quyidagi buyruqni kiriting:
+        </p>
+
+        <pre><code>pip install pytest</code></pre>
+
+        <p>
+            Agar sizda <code>pip</code> o'rnatilmagan bo'lsa, siz Python bilan birga kelgan <code>get-pip.py</code> skriptini ishlatib o'rnatishingiz mumkin.
+        </p>
+
+        <h2>Terminalga kirish</h2>
+        <h3>Windows foydalanuvchilari uchun</h3>
+        <p>
+            Windows'da terminalga kirish uchun "Command Prompt" yoki "Powershell"dan foydalanishingiz mumkin. Quyidagi usullar orqali terminalga kirishingiz mumkin:
+        </p>
+        <ol>
+            <li>
+                <strong>Start</strong> tugmasini bosing va qidiruv maydoniga "cmd" yoki "Command Prompt" deb yozing. Keyin esa topilgan dastur ustiga bosib oching.
+            </li>
+            <li>
+                Alternativ ravishda, klaviaturada <strong>Windows + R</strong> tugmalarini bosib, ochilgan oynaga "cmd" deb yozing va "Enter" bosing.
+            </li>
+        </ol>
+
+        <h3>MacOS va Linux foydalanuvchilari uchun</h3>
+        <p>
+            MacOS va Linux tizimlarida terminalga kirish juda oson:
+        </p>
+        <ol>
+            <li>
+                <strong>MacOS:</strong> "Applications" bo'limiga kiring, "Utilities" papkasidan "Terminal"ni oching.
+            </li>
+            <li>
+                <strong>Linux:</strong> Asosan "Ctrl + Alt + T" tugmalari orqali terminalni tezda ochishingiz mumkin.
+            </li>
+        </ol>
+
+        <h2>pytest dan qanday foydalanish kerak?</h2>
+        <p>
+            Quyida <code>pytest</code> yordamida oddiy test yozish misoli keltirilgan:
+        </p>
+
+        <pre><code># test_foydalanuvchi.py
+
+def test_qoshish():
+    assert 1 + 1 == 2
+
+def test_ayirish():
+    assert 3 - 1 == 2
+
+def test_multiply():
+    assert 2 * 2 == 4
+</code></pre>
+
+        <h2>Testlarni ishga tushirish</h2>
+        <p>
+            Testlarni ishga tushirish uchun terminalda quyidagi buyruqni bajarish kerak:
+        </p>
+
+        <pre><code>pytest test_foydalanuvchi.py</code></pre>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda web dasturlash (HTML, CSS, JavaScript) haqida ma'lumot olasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson11.html" class="button">Ortga qaytish</a>
+        <a href="lesson13.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

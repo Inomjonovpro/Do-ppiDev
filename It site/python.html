@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Kursi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        /* Tepadagi menyu */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Python haqida bo'lim */
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        #content h1 {
+            font-size: 2.5em;
+        }
+        .python-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4; /* Oq emas, biroz kul rang */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kartochkaga soya qo'shildi */
+        }
+        .python-info img {
+            float: left;
+            margin-right: 20px;
+            width: 150px;
+        }
+        .python-info p {
+            color: #333; /* Matn rangi qoraroq bo'ldi */
+        }
+
+        /* Darslar uchun tugmalar */
+        .lesson-buttons {
+            margin-top: 20px;
+        }
+        .lesson-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #42a5f5, #1e88e5);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            font-size: 1.3em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .lesson-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
+        }
+
+        /* Footerni sahifaning pastiga o'rnatish */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Footer har doim pastda bo'lishini ta'minlaydi */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <img src="doppi_logo.png" alt="Do'ppiDev Logo" class="site-logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <!-- Python haqida bo'lim -->
+    <section id="content">
+        <h1>Python Dasturlash Kursi</h1>
+
+        <div class="python-info">
+            <img src="python-logo.png" alt="Python Logo">
+            <p>
+                Python - bu yuqori darajadagi, umumiy maqsadli dasturlash tili bo'lib, 1980-yillarning oxirida Gvido van Rossum tomonidan yaratilgan va 1991-yilda ommaga taqdim etilgan. Python oson o'rganilishi va tushunarli sintaksisi bilan mashhur bo'lib, ko'plab dasturlash tillariga nisbatan qulaylik yaratadi.
+            </p>
+            <p>
+                Python'da web ilovalar (Django, Flask), ilmiy hisob-kitoblar (NumPy, SciPy), sun'iy intellekt (TensorFlow, Keras), o'yin dasturlash (Pygame), avtomatlashtirish va boshqa ko'plab sohalar uchun dasturlar yozish mumkin.
+            </p>
+            <p>
+                Pythonning keng qo'llanilishi va kuchli kutubxonalari uni dunyodagi eng ommabop dasturlash tillaridan biriga aylantirdi.
+            </p>
+        </div>
+
+        <p>Python dasturlash asoslarini o'rganish uchun quyidagi darslarni tanlang:</p>
+
+        <div class="lesson-buttons">
+            <a href="lesson1.html" class="lesson-button">1. Kirish va o'rnatish</a>
+            <a href="lesson2.html" class="lesson-button">2. Ma'lumot turlari va o'zgaruvchilar</a>
+            <a href="lesson3.html" class="lesson-button">3. Shartli iboralar (if-else)</a>
+            <a href="lesson4.html" class="lesson-button">4. Tsikllar (for, while)</a>
+            <a href="lesson5.html" class="lesson-button">5. Funksiyalar va modullar</a>
+            <a href="lesson6.html" class="lesson-button">6. Ro'yxatlar va to'plamlar</a>
+            <a href="lesson7.html" class="lesson-button">7. Fayllar bilan ishlash</a>
+            <a href="lesson8.html" class="lesson-button">8. OOP (Ob'ektga yo'naltirilgan dasturlash)</a>
+            <a href="lesson9.html" class="lesson-button">9. Dasturlash printsiplari (Kapsulalash, Meros, Polimorfizm)</a>
+            <a href="lesson10.html" class="lesson-button">10. API'lar bilan ishlash</a>
+            <a href="lesson11.html" class="lesson-button">11. Asinxron dasturlash (asyncio)</a>
+            <a href="lesson12.html" class="lesson-button">12. Avtomatlashtirish (pytest)</a>
+            <a href="lesson13.html" class="lesson-button">13. Web dasturlash (HTML, CSS, JavaScript)</a>
+            <a href="lesson14.html" class="lesson-button">14. Kichik dasturlar yozish</a>
+            <a href="lesson15.html" class="lesson-button">15. Mashina o'rganish tushunchalari</a>
+            <a href="lesson16.html" class="lesson-button">16. Tabiiy Tilni Qayta Qayta ishlash (NLP)</a>
+            <a href="lesson17.html" class="lesson-button">17. Avtomatik test qilish (Selenium)</a>
+            <a href="lesson18.html" class="lesson-button">18. Dasturiy ta'minotni tarqatish (PIP)</a>
+            <a href="lesson19.html" class="lesson-button">19. Python kutubxonalari (NumPy, Pandas, Matplotlib, Scikit-learn)</a>
+            <a href="lesson20.html" class="lesson-button">20. Web ilovalar uchun autentifikatsiya (Django/Flask)</a>
+            <a href="lesson21.html" class="lesson-button">21. Containerization (Docker)</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

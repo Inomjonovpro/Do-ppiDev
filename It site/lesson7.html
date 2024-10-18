@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 7-Dars: While Tsikli (While Loop)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #b2dfdb, #80cbc4);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #26a69a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00897b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>7-Dars: While Tsikli (While Loop)</h1>
+
+        <h2>While Tsikli nima?</h2>
+        <p>
+            While tsikli - bu kodni biror shart (condition) to‘g‘ri bo‘lganda (haqiqat bo‘lganda) takrorlab ishlatadi. While tsikli to‘xtashi uchun shart noto‘g‘ri (false) bo‘lishi kerak.
+        </p>
+
+        <h2>While Tsikli qanday ishlaydi?</h2>
+        <p>
+            While tsikli biror shartni tekshiradi va shart to‘g‘ri bo‘lsa, kodni qayta-qayta bajaradi. Shart noto‘g‘ri bo‘lsa, tsikl to‘xtaydi. 
+        </p>
+
+        <pre><code>x = 1
+while x <= 5:  # shart: x 5 dan kichik yoki teng bo'lsa
+    print(x)   # x ni ekranga chiqaramiz
+    x += 1     # har safar x ga 1 qo'shamiz</code></pre>
+
+        <p>Bu misolda while tsikli 5 marta ishlaydi va x ning qiymatini ekranga chiqaradi. Har safar x 1 ga oshiriladi.</p>
+
+        <h2>Cheksiz While Tsiklidan saqlaning</h2>
+        <p>
+            Agar while tsiklidagi shart hech qachon noto‘g‘ri bo‘lmasa, tsikl hech qachon to‘xtamaydi. Bu holatga **cheksiz tsikl (infinite loop)** deyiladi va kompyuter ishidagi xatolarga sabab bo‘lishi mumkin.
+        </p>
+
+        <pre><code>x = 1
+while x > 0:  # bu shart doimo to'g'ri bo'ladi, tsikl hech qachon to'xtamaydi
+    print(x)</code></pre>
+
+        <p>Bu misolda tsikl hech qachon to‘xtamaydi, chunki shart doimo haqiqat bo‘lib turadi.</p>
+
+        <h2>Break yordamida while tsiklni to‘xtatish</h2>
+        <p>
+            Agar while tsiklni ma'lum bir joyda to‘xtatmoqchi bo‘lsangiz, <code>break</code> kalit so‘zidan foydalanishingiz mumkin. Bu kalit so‘z tsiklni to‘xtatadi va undan tashqaridagi kodni bajaradi.
+        </p>
+
+        <pre><code>x = 1
+while x <= 10:
+    if x == 6:  # x 6 ga teng bo'lganda tsikl to'xtaydi
+        break
+    print(x)
+    x += 1</code></pre>
+
+        <p>Bu yerda tsikl 6 ga yetganda <code>break</code> so‘zi tufayli to‘xtatiladi.</p>
+
+        <h2>Continue yordamida tsiklning ma'lum bir qismini o'tkazib yuborish</h2>
+        <p>
+            <code>continue</code> kalit so‘zi while tsikl ichidagi biror qismni o‘tkazib yuboradi va tsiklning keyingi iteratsiyasiga (takrorlanishiga) o‘tadi.
+        </p>
+
+        <pre><code>x = 0
+while x < 5:
+    x += 1
+    if x == 3:  # x 3 ga teng bo'lganda davom etadi, 3 chiqarilmaydi
+        continue
+    print(x)</code></pre>
+
+        <p>Bu yerda <code>x</code> 3 bo‘lganda <code>continue</code> so‘zi tufayli o‘tkazib yuboriladi, lekin qolgan barcha sonlar ekranga chiqariladi.</p>
+
+        <h2>Misol (Example)</h2>
+        <p>While tsikldan foydalanib oddiy misol yozamiz:</p>
+
+        <pre><code>son = 1
+while son <= 10:
+    print(f"{son} * 3 = {son * 3}")
+    son += 1</code></pre>
+
+        <p>Bu yerda biz 1 dan 10 gacha sonlarni olamiz va ularni 3 ga ko‘paytirib natijani chiqaramiz.</p>
+
+        <h2>Xulosa</h2>
+        <p>
+            While tsikli - bu kodni takrorlashda muhim vositadir. Uning yordamida shart bajarilgunga qadar bir xil kodni takrorlash mumkin. Keyingi darsimizda <b>OOP (Ob'ektga yo'naltirilgan dasturlash)</b> haqida o‘rganamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson6.html" class="button">Ortga qaytish</a>
+        <a href="lesson8.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

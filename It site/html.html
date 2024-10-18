@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Darslari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        /* Tepadagi menyu */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HTML haqida bo'lim */
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        #content h1 {
+            font-size: 2.5em;
+        }
+        .html-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4; /* Oq emas, biroz kul rang */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kartochkaga soya qo'shildi */
+        }
+        .html-info img {
+            float: left;
+            margin-right: 20px;
+            width: 150px;
+        }
+        .html-info p {
+            color: #333; /* Matn rangi qoraroq bo'ldi */
+        }
+
+        /* Darslar uchun tugmalar */
+        .lesson-buttons {
+            margin-top: 20px;
+        }
+        .lesson-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #42a5f5, #1e88e5);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            font-size: 1.3em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .lesson-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
+        }
+
+        /* Footerni sahifaning pastiga o'rnatish */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Footer har doim pastda bo'lishini ta'minlaydi */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <!-- HTML haqida bo'lim -->
+    <section id="content">
+        <h1>HTML Dasturlash Kursi</h1>
+
+        <div class="html-info">
+            <img src="html-logo.png" alt="HTML Logo">
+            <p>
+                HTML (HyperText Markup Language) - bu web sahifalarni yaratishda ishlatiladigan asosiy belgilar tili. HTML 1993-yilda Tim Berners-Lee tomonidan yaratilgan. HTML web sahifalarining tuzilishini belgilaydi va matn, rasm, video va boshqa elementlarni joylashtirish imkonini beradi.
+            </p>
+            <p>
+                HTML da sahifalar tarkibida paragraflar, sarlavhalar, ro'yxatlar, havolalar, rasmlar va boshqa ko'plab elementlarni yaratish mumkin. HTML, CSS (Cascading Style Sheets) va JavaScript bilan birga, web dasturlashning asosiy komponentlaridan biridir.
+            </p>
+            <p>
+                HTMLning yangi versiyalari (HTML5) turli xil yangi imkoniyatlar, jumladan video va audio elementlarini qo'llab-quvvatlashni, grafikalar va interaktiv imkoniyatlarni qo'shishni ta'minlaydi.
+            </p>
+        </div>
+
+        <p>HTML dasturlash asoslarini o'rganish uchun quyidagi darslarni tanlang:</p>
+
+        <div class="lesson-buttons">
+            <a href="htmllesson1.html" class="lesson-button">1. Kirish va o'rnatish</a>
+            <a href="htmllesson2.html" class="lesson-button">2. HTML elementlari</a>
+            <a href="htmllesson3.html" class="lesson-button">3. Havolalar va rasm qo'shish</a>
+            <a href="htmllesson4.html" class="lesson-button">4. Formalar va inputlar</a>
+            <a href="htmllesson5.html" class="lesson-button">5. CSS bilan tanishuv</a>
+            <a href="htmllesson6.html" class="lesson-button">6. JavaScript bilan tanishuv</a>
+            <a href="htmllesson7.html" class="lesson-button">7. HTML5 yangi imkoniyatlari</a>
+            <a href="htmllesson8.html" class="lesson-button">8. Responsive dizayn asoslari</a>
+            <a href="htmllesson9.html" class="lesson-button">9. SEO uchun HTML</a>
+            <a href="htmllesson10.html" class="lesson-button">10. Amaliyot: O'zingizning sahifangizni yaratish</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

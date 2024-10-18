@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 16-Dars: Tabiiy Tilni Qayta Ishlash (NLP)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>16-Dars: Tabiiy Tilni Qayta Ishlash (NLP)</h1>
+
+        <h2>Tabiiy Tilni Qayta Ishlashga kirish</h2>
+        <p>
+            Tabiiy Tilni Qayta Ishlash (NLP) inson tilini kompyuter orqali tahlil qilish va tushunishga imkon beradi. Ushbu darsda NLP'ning asosiy tushunchalarini o'rganamiz va sodda dasturlar yordamida uni qanday qo'llashni ko'rib chiqamiz.
+        </p>
+
+        <h2>Kerakli kutubxonalar</h2>
+        <p>
+            Python'da NLP bilan ishlash uchun quyidagi kutubxonalarni o'rnating:
+        </p>
+
+        <pre><code>pip install nltk
+pip install spacy
+pip install textblob</code></pre>
+
+        <ul>
+            <li><strong>NLTK (Natural Language Toolkit):</strong> Eng mashhur NLP kutubxonasi.</li>
+            <li><strong>spaCy:</strong> Tezkor va kuchli NLP kutubxonasi.</li>
+            <li><strong>TextBlob:</strong> Oddiy NLP operatsiyalari uchun foydalaniladigan qulay kutubxona.</li>
+        </ul>
+
+        <h2>Oddiy NLP Amaliyoti</h2>
+        <p>
+            Quyida NLTK yordamida oddiy matn tahlilini amalga oshiramiz:
+        </p>
+
+        <pre><code>import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+
+text = "Salom, Python dasturchilari! NLP bilan ishlash qiziqarli."
+words = word_tokenize(text)
+
+print(words)</code></pre>
+
+        <h2>TextBlob Bilan Matn Tahlili</h2>
+        <p>
+            Quyida TextBlob yordamida matnni sentiment tahlilini amalga oshiramiz:
+        </p>
+
+        <pre><code>from textblob import TextBlob
+
+text = "Python juda qiziqarli dasturlash tili."
+blob = TextBlob(text)
+
+# Sentiment tahlili
+sentiment = blob.sentiment
+print(sentiment)</code></pre>
+
+        <h2>spaCy Bilan Matnni Lemmatizatsiya Qilish</h2>
+        <p>
+            spaCy yordamida matnni lemmatizatsiya qilish amaliyoti:
+        </p>
+
+        <pre><code>import spacy
+nlp = spacy.load("en_core_web_sm")
+
+text = "We are learning natural language processing."
+doc = nlp(text)
+
+# Lemmatizatsiya
+for token in doc:
+    print(f"{token.text} -> {token.lemma_}")</code></pre>
+
+        <h2>Keyingi Qadamlar</h2>
+        <p>
+            Bu darsda siz Tabiiy Tilni Qayta Ishlashning asosiy tushunchalarini o'rgangansiz. Keyingi darslarda NLP bilan yanada murakkab amaliyotlar, masalan, tilni avtomatik tushunish va til modellari bilan ishlashni o'rganasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson15.html" class="button">Ortga qaytish</a>
+        <a href="lesson17.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

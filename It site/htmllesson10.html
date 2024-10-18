@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'z Sahifangizni Yaratish</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e1bee7, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>O'z Sahifangizni Yaratish</h1>
+
+        <h2>Sahifa Nima?</h2>
+        <p>
+            Veb-sahifa — bu Internetda joylashgan hujjat bo'lib, u foydalanuvchilar uchun ma'lumotlarni taqdim etadi. HTML, CSS va JavaScript yordamida sahifalar yaratiladi.
+        </p>
+
+        <h2>HTML Kod Misoli</h2>
+        <p>Quyida oddiy HTML sahifasini yaratish uchun kerakli kod keltirilgan:</p>
+        
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>Sahifangiz&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1>Salom, dunyo!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h2>CSS Qo'llash</h2>
+        <p>
+            CSS yordamida sahifalaringizni go'zal ko'rinishga keltirishingiz mumkin. Masalan, quyidagi CSS kodini qo'shish orqali sahifangizning fon rangini o'zgartirishingiz mumkin:
+        </p>
+        <pre><code>body {
+    background-color: #e0f7fa;
+}</code></pre>
+    </div>
+
+    <div class="button-container">
+        <a href="htmllesson9.html" class="button">Oldingi dars</a>
+        <a href="index.html" class="button">Bosh sahifaga qaytish</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

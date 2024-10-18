@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 19-Dars: Mashhur Python Kutubxonalari bilan ishlash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>19-Dars: Mashhur Python Kutubxonalari bilan ishlash</h1>
+
+        <h2>1. NumPy bilan ishlash</h2>
+        <p>
+            NumPy Python'da matematik va ilmiy hisob-kitoblarni amalga oshirish uchun keng qo'llaniladi. U katta hajmdagi massivlar (arrays) bilan ishlashni juda osonlashtiradi.
+        </p>
+
+        <pre><code>import numpy as np
+
+# NumPy yordamida massiv yaratish
+massiv = np.array([1, 2, 3, 4, 5])
+
+# Massiv elementlarini ko'paytirish
+massiv_kopaytirish = massiv * 2
+print("Massivni ko'paytirish:", massiv_kopaytirish)
+
+# Massivdagi elementlarning o'rtacha qiymatini hisoblash
+ortacha_qiymat = np.mean(massiv)
+print("O'rtacha qiymat:", ortacha_qiymat)
+</code></pre>
+
+        <h2>2. Pandas bilan ishlash</h2>
+        <p>
+            Pandas - ma'lumotlarni tahlil qilish va ular bilan ishlash uchun mo'ljallangan kutubxona. U ma'lumotlar ramkalari (DataFrames) bilan ishlash imkoniyatini beradi.
+        </p>
+
+        <pre><code>import pandas as pd
+
+# Pandas ma'lumotlar jadvali yaratish
+data = {'Ism': ['Ali', 'Vali', 'G'ani'],
+        'Yosh': [25, 30, 22]}
+
+df = pd.DataFrame(data)
+
+# Jadvalni ko'rsatish
+print(df)
+
+# Ma'lumotlar jadvalidagi eng katta yoshni topish
+eng_katta_yosh = df['Yosh'].max()
+print("Eng katta yosh:", eng_katta_yosh)
+</code></pre>
+
+        <h2>3. Matplotlib bilan diagrammalar yaratish</h2>
+        <p>
+            Matplotlib - diagramma va grafiklar chizish uchun juda foydali kutubxona. Uni ma'lumotlarni ko'rsatuvchi vizualizatsiyalar yaratish uchun ishlatish mumkin.
+        </p>
+
+        <pre><code>import matplotlib.pyplot as plt
+
+# Ma'lumotlar
+yoshlar = [25, 30, 22]
+ism = ['Ali', 'Vali', 'G\'ani']
+
+# Diagramma chizish
+plt.bar(ism, yoshlar)
+plt.title('Yoshlar taqqoslanishi')
+plt.xlabel('Ism')
+plt.ylabel('Yosh')
+plt.show()
+</code></pre>
+
+        <h2>PIP orqali kutubxonalarni o'rnatish</h2>
+        <p>
+            Yuqoridagi kutubxonalarni ishlatish uchun siz quyidagicha ularni PIP yordamida o'rnatishingiz mumkin:
+        </p>
+        <ul>
+            <li><code>pip install numpy</code> - NumPy kutubxonasini o'rnatish.</li>
+            <li><code>pip install pandas</code> - Pandas kutubxonasini o'rnatish.</li>
+            <li><code>pip install matplotlib</code> - Matplotlib kutubxonasini o'rnatish.</li>
+        </ul>
+
+        <h2>Xulosa</h2>
+        <p>
+            Bu darsda Python'dagi eng mashhur kutubxonalardan biri bo'lgan **NumPy**, **Pandas**, va **Matplotlib** bilan ishlashni o'rgandingiz. Bu kutubxonalar dasturingizda katta hajmdagi ma'lumotlar bilan ishlashda, ularni tahlil qilishda va natijalarni grafik shaklda ko'rsatishda juda muhim rol o'ynaydi.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson18.html" class="button">Ortga qaytish</a>
+        <a href="lesson20.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

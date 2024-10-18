@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 20-Dars: Web Ilovalar Uchun Autentifikatsiya</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>20-Dars: Web Ilovalar Uchun Autentifikatsiya (Django yoki Flask)</h1>
+
+        <h2>1. Django bilan autentifikatsiya</h2>
+        <p>
+            Django - kuchli va ommabop Python web-frameworki. Web ilovalarda foydalanuvchilarni ro'yxatdan o'tkazish va ularni autentifikatsiya qilish uchun Django'da o'rnatilgan autentifikatsiya tizimi mavjud.
+        </p>
+
+        <h3>Django loyihasini yaratish:</h3>
+        <pre><code># Django'ni o'rnatish
+pip install django
+
+# Django loyihasini yaratish
+django-admin startproject mening_loyiham
+
+# Loyihani boshqarish
+cd mening_loyiham
+python manage.py runserver
+</code></pre>
+
+        <h3>Foydalanuvchilarni ro'yxatdan o'tkazish va autentifikatsiya qilish:</h3>
+        <pre><code># settings.py ichida o'rnatilgan autentifikatsiyani faollashtirish
+INSTALLED_APPS = [
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    # boshqa modullar...
+]
+
+# URLs ichida autentifikatsiya sahifalarini ko'rsatish
+from django.urls import path
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+]
+</code></pre>
+
+        <h2>2. Flask bilan autentifikatsiya</h2>
+        <p>
+            Flask - minimalistik va moslashuvchan Python web-frameworki. Flask yordamida autentifikatsiya tizimini qo'shish uchun **Flask-Login** kutubxonasidan foydalanish mumkin.
+        </p>
+
+        <h3>Flask loyihasini yaratish:</h3>
+        <pre><code># Flask'ni va Flask-Login'ni o'rnatish
+pip install flask flask-login
+
+# Flask ilovasini yaratish
+from flask import Flask, render_template, redirect, url_for, request
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
+
+app = Flask(__name__)
+app.secret_key = 'maxfiy_kalit'
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# Foydalanuvchi modeli
+class User(UserMixin):
+    pass
+
+# Foydalanuvchi yuklash
+@login_manager.user_loader
+def load_user(user_id):
+    user = User()
+    user.id = user_id
+    return user
+
+# Login sahifasi
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        user = User()
+        user.id = request.form['username']
+        login_user(user)
+        return redirect(url_for('dashboard'))
+    return render_template('login.html')
+
+# Dashboard sahifasi
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    return 'Siz dashboard sahifasidamiz!'
+
+# Logout
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+
+        <h2>3. PIP orqali kutubxonalarni o'rnatish</h2>
+        <p>Web ilovalar yaratishda Django yoki Flask bilan ishlash uchun kutubxonalarni quyidagi buyruqlar bilan o'rnatishingiz mumkin:</p>
+        <ul>
+            <li><code>pip install django</code> - Django kutubxonasini o'rnatish.</li>
+            <li><code>pip install flask flask-login</code> - Flask va Flask-Login kutubxonalarini o'rnatish.</li>
+        </ul>
+
+        <h2>Xulosa</h2>
+        <p>
+            Bu darsda web ilovalarda foydalanuvchilarni autentifikatsiya qilish usullarini ko'rib chiqdik. Django va Flask kabi frameworklar yordamida foydalanuvchilarni ro'yxatdan o'tkazish va ularni tizimga kiritish juda oson.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson19.html" class="button">Ortga qaytish</a>
+        <a href="lesson21.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

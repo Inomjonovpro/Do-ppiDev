@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 5-Dars: Funksiyalar (Functions)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1976d2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>5-Dars: Funksiyalar (Functions)</h1>
+
+        <h2>Funksiyalar nima?</h2>
+        <p>
+            Funksiyalar (functions) – bu dasturdagi kodlarni takrorlamaslik uchun yaratiladigan bloklar bo‘lib, ular bir marta yoziladi va keyinchalik kerak bo'lganda qayta ishlatiladi. Bu kodni oson boshqarish (manage) va o'qishga yengillashtiradi.
+        </p>
+
+        <p>
+            Python tilida funksiyalarni <code>def</code> (define – aniqlash) kalit so'zi bilan e'lon qilamiz.
+        </p>
+
+        <h2>Funksiya qanday yaratiladi?</h2>
+        <p>Funksiya quyidagi formatda yaratiladi:</p>
+
+        <pre><code>def funksiya_nomi():
+    # Bu yerda kod yoziladi
+    print("Salom, bu funksiya!")</code></pre>
+
+        <p>
+            Yuqoridagi misolda biz <code>funksiya_nomi()</code> nomli funksiyani e'lon qildik. Bu funksiya chaqirilganda (called), ekranga "Salom, bu funksiya!" xabarini chiqaradi.
+        </p>
+
+        <h2>Funksiyani qanday chaqiramiz?</h2>
+        <p>Funksiyani yaratganimizdan so‘ng, uni ishlatish uchun chaqiramiz (call). Funksiyani chaqirish juda oddiy:</p>
+
+        <pre><code>funksiya_nomi()  # funksiyani chaqirish</code></pre>
+
+        <p>Bu kod funksiyani chaqiradi va uning ichidagi kodni bajaradi.</p>
+
+        <h2>Funksiya parametrlarini qanday ishlatamiz?</h2>
+        <p>
+            Funksiyalar ma'lumotlarni parametrlar (parameters) yordamida qabul qilishi va ular bilan ishlashi mumkin. Parametrlar funksiyaga qiymatlarni yuborish (pass values) imkonini beradi.
+        </p>
+
+        <pre><code>def salom_ber(ism):  # ism parametri qabul qilinadi
+    print(f"Salom, {ism}!")  # ismingiz bilan salom beradi</code></pre>
+
+        <p>Bu yerda <code>salom_ber</code> funksiyasi <code>ism</code> parametrini qabul qiladi va o‘sha ism bilan xabar chiqaradi:</p>
+
+        <pre><code>salom_ber("Muhammadamin")  # Salom, Muhammadamin!</code></pre>
+
+        <p>Funksiyani chaqirganingizda unga kerakli parametrni yuborasiz, va u shu qiymat bilan ishlaydi.</p>
+
+        <h2>Funksiya qaytariqlari (Return Values)</h2>
+        <p>
+            Ba'zi funksiyalar natijani qaytarishi (return) mumkin. Funksiyaning natijasini qaytarish uchun <code>return</code> kalit so‘zi ishlatiladi.
+        </p>
+
+        <pre><code>def kvadrat_soni(n):
+    return n ** 2  # n ning kvadrati qaytariladi</code></pre>
+
+        <p>Bu funksiya <code>n</code> qiymatini qabul qilib, uning kvadratini (square) hisoblaydi va natijani qaytaradi.</p>
+
+        <pre><code>son = kvadrat_soni(5)  # son = 25
+print(son)  # 25 ni chiqaradi</code></pre>
+
+        <p>Yuqoridagi kodda <code>kvadrat_soni(5)</code> funksiyasi 5 ning kvadratini qaytarib, natijani <code>son</code> o‘zgaruvchisiga saqlaydi.</p>
+
+        <h2>Misol (Example)</h2>
+        <p>Keling, funksiyalardan foydalangan holda oddiy misol yozamiz:</p>
+
+        <pre><code>def katta_son(a, b):
+    if a > b:
+        return a  # agar a b dan katta bo'lsa, a qaytariladi
+    else:
+        return b  # aks holda, b qaytariladi
+
+print(katta_son(10, 20))  # Natija: 20</code></pre>
+
+        <p>Bu kod ikki sonni taqqoslaydi va kattasini qaytaradi.</p>
+
+        <h2>Keyingi darslar (Next lessons)</h2>
+        <p>
+            Keyingi darsimizda funksiyalarning yana ham chuqurroq turlarini o'rganamiz, masalan, lambda funksiyalar va rekursiv (recursive) funksiyalar.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson4.html" class="button">Ortga qaytish</a>
+        <a href="lesson6.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 10-Dars: API'lar va Modullar bilan ishlash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e1f5fe, #b3e5fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>10-Dars: API'lar va Modullar bilan ishlash</h1>
+
+        <h2>API nima?</h2>
+        <p>
+            API (Application Programming Interface) dasturiy ta'minotlar orasida muloqot qilish uchun mo'ljallangan interfeysdir. API'lar boshqa dasturiy ta'minotlarning funksiyalarini chaqirishga imkon beradi.
+        </p>
+
+        <h2>API'lar qanday ishlaydi?</h2>
+        <p>
+            API'lar odatda HTTP protokoli orqali ishlaydi va ma'lumotlar JSON yoki XML formatlarida uzatiladi. 
+        </p>
+
+        <h2>Python'da API'lar bilan ishlash</h2>
+        <p>
+            Python'da API'lar bilan ishlash uchun <code>requests</code> kutubxonasi keng qo'llaniladi. Quyidagi misolda API'dan ma'lumot olish jarayoni ko'rsatilgan:
+        </p>
+
+        <pre><code>import requests
+
+# API URL'si
+url = 'https://api.exapmle.com/data'
+
+# API'dan ma'lumot olish
+response = requests.get(url)
+
+# Javobni tekshirish
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print("Xato:", response.status_code)</code></pre>
+
+        <h2>Foydalanish misoli</h2>
+        <p>
+            Misol uchun, o'zingizning weather API'ingizdan foydalanib, ob-havoni olish:
+        </p>
+
+        <pre><code>import requests
+
+# OpenWeatherMap API URL'si
+api_key = 'SIZNING_API_KALITINGIZ'
+city = 'Toshkent'
+url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    print(f"{city} ob-havosi: {data['main']['temp']}°C")
+else:
+    print("Xato:", response.status_code)</code></pre>
+
+        <h2>Modullar haqida</h2>
+        <p>
+            Python'da modullar dasturlarni tashkil etish va kodni qayta ishlatish imkonini beradi. Har bir modul o'z ichida funksiyalar, klasslar va o'zgaruvchilarni saqlaydi.
+        </p>
+        <p>
+            O'z modulini yaratish uchun, avvalo, yangi fayl yaratish va unga <code>.py</code> kengaytmasini berish kerak. Masalan, <code>my_module.py</code>.
+        </p>
+
+        <h2>Modulni o'rnatish</h2>
+        <p>
+            Ommabop modullarni o'rnatish uchun <code>pip</code> paket menejeridan foydalanamiz. Quyidagi buyruq yordamida <code>requests</code> modulini o'rnatish mumkin:
+        </p>
+        <pre><code>pip install requests</code></pre>
+        <p>
+            O'rnatilgan modulni dasturda quyidagicha import qilamiz:
+        </p>
+        <pre><code>import requests</code></pre>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda asinxron dasturlash (asyncio) haqida ma'lumot olasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson9.html" class="button">Ortga qaytish</a>
+        <a href="lesson11.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

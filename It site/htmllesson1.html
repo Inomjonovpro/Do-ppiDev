@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 1-Dars: Kirish va O'rnatish</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e1f5fe, #b3e5fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>HTML 1-Dars: Kirish va O'rnatish</h1>
+        <h2>HTML nima?</h2>
+        <p>
+            HTML (HyperText Markup Language) — bu veb-sahifalarni tuzish uchun ishlatiladigan til. U orqali veb-sahifa tarkibini belgilaymiz va brauzerga bu sahifaning qanday ko'rinishda bo'lishini ko'rsatamiz.
+        </p>
+
+        <h2>HTML dasturini o'rnatish</h2>
+        <p>
+            HTML yozish uchun maxsus dastur o'rnatishga ehtiyoj yo'q, chunki siz oddiy matn muharriridan foydalanib HTML yozishingiz mumkin. Masalan, Notepad yoki Visual Studio Code kabi muharrirlarni ishlatishingiz mumkin.
+        </p>
+
+        <h2>Birinchi HTML faylingiz</h2>
+        <p>
+            Quyida oddiy HTML hujjatining namunasi keltirilgan:
+        </p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Birinchi sahifa&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Salom, Dunyo!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Yuqoridagi kodni saqlab, brauzerda ochganingizda, "Salom, Dunyo!" matni ko'rsatiladi.</p>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda HTML teglar va ularning ishlatilishini batafsil o'rganamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="index.html" class="button">Ortga qaytish</a>
+        <a href="htmllesson2.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

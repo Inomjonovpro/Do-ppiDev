@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 17-Dars: Selenium bilan Avtomatik Testlash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>17-Dars: Selenium bilan Avtomatik Testlash</h1>
+
+        <h2>Selenium haqida</h2>
+        <p>
+            Selenium - bu brauzerni avtomatlashtirish uchun ishlatiladigan dasturiy ta'minot vositasi. U avtomatik ravishda veb-sahifalarni ochish, shakllarni to'ldirish, tugmalarni bosish va boshqa ko'plab harakatlarni amalga oshirishi mumkin. Selenium veb-dasturlarni test qilishda juda foydali hisoblanadi.
+        </p>
+
+        <h2>Kerakli kutubxonalarni o'rnatish</h2>
+        <p>
+            Selenium bilan ishlash uchun kutubxonani quyidagi buyruq orqali o'rnating:
+        </p>
+
+        <pre><code>pip install selenium</code></pre>
+
+        <h2>Oddiy Selenium dasturi</h2>
+        <p>
+            Quyida Selenium orqali Google'da qidiruv amalga oshirish uchun sodda bir misol keltirilgan:
+        </p>
+
+        <pre><code>from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+# Brauzerni ochish
+driver = webdriver.Chrome()
+
+# Google'ni ochish
+driver.get("https://www.google.com")
+
+# Qidiruv satriga matn kiritish
+search_box = driver.find_element("name", "q")
+search_box.send_keys("Python dasturlash tili")
+search_box.send_keys(Keys.RETURN)
+
+# Natijalar sahifasini chop etish
+print(driver.title)
+
+# Brauzerni yopish
+driver.quit()</code></pre>
+
+        <h2>Webdrayverni o'rnatish</h2>
+        <p>
+            Selenium ishlashi uchun sizga brauzer uchun WebDriver kerak bo'ladi. Masalan, agar siz Google Chrome ishlatayotgan bo'lsangiz, ChromeDriver o'rnatishingiz kerak bo'ladi. ChromeDriver'ni <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank">bu yerda</a> yuklab olishingiz mumkin.
+        </p>
+
+        <h2>Elementlarni topish</h2>
+        <p>
+            Selenium'da elementlarni topish uchun bir nechta usullar mavjud:
+        </p>
+        <ul>
+            <li><code>find_element_by_name()</code> - Elementni nomi bo'yicha topish.</li>
+            <li><code>find_element_by_id()</code> - Elementni ID'si bo'yicha topish.</li>
+            <li><code>find_element_by_xpath()</code> - XPath yordamida elementni topish.</li>
+        </ul>
+
+        <h2>Keyingi qadamlar</h2>
+        <p>
+            Bu darsda Selenium orqali oddiy avtomatlashtirilgan testni yaratishni o'rgandingiz. Keyingi darslarda Selenium'ni yanada murakkabroq testlash jarayonlari uchun ishlatishni o'rganamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson16.html" class="button">Ortga qaytish</a>
+        <a href="lesson18.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

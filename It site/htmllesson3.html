@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 3-Dars: Sarlavhalar va Paragraflar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ffebee, #e3f2fd);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>HTML 3-Dars: Sarlavhalar va Paragraflar</h1>
+
+        <h2>HTMLdagi Sarlavhalar</h2>
+        <p>
+            HTMLda sarlavhalarni yaratish uchun `<h1>` dan `<h6>` gacha teglar ishlatiladi. Bu teglar veb-sahifada matnning qanchalik katta yoki kichik bo'lishini belgilaydi. 
+            <b>`<h1>`</b> - eng katta sarlavha bo'lib, sahifaning asosiy sarlavhasini ifodalaydi. 
+            <b>`<h6>`</b> esa eng kichik sarlavha tegidir. Quyidagi misolda har xil darajadagi sarlavhalarni ko'rishingiz mumkin:
+        </p>
+
+        <pre><code>&lt;h1&gt;Eng katta sarlavha&lt;/h1&gt;
+&lt;h2&gt;Kichikroq sarlavha&lt;/h2&gt;
+&lt;h3&gt;H3 darajadagi sarlavha&lt;/h3&gt;
+&lt;h4&gt;H4 darajadagi sarlavha&lt;/h4&gt;
+&lt;h5&gt;H5 darajadagi sarlavha&lt;/h5&gt;
+&lt;h6&gt;Eng kichik sarlavha&lt;/h6&gt;</code></pre>
+
+        <h2>HTMLdagi Paragraflar</h2>
+        <p>
+            HTMLda matnni paragraf (band) qilish uchun <b>&lt;p&gt;</b> tegi ishlatiladi. Har bir paragrafning o'zi alohida qator sifatida joylashadi. Quyida oddiy paragraf qanday ko'rinishga ega ekanligini ko'rsatamiz:
+        </p>
+
+        <pre><code>&lt;p&gt;Bu oddiy paragraf. Bu yerda biz HTML hujjatida matnni qanday qilib alohida band sifatida ko'rsatish mumkinligini ko'rib chiqamiz.&lt;/p&gt;</code></pre>
+
+        <h2>Bir nechta Paragraflarni Yaratish</h2>
+        <p>
+            HTMLda bir nechta paragraflarni yaratish uchun har bir matnni <b>&lt;p&gt;</b> tegiga o'rab qo'yamiz. Har bir paragraf alohida qator sifatida chiqadi. Misol:
+        </p>
+
+        <pre><code>&lt;p&gt;Bu birinchi paragraf.&lt;/p&gt;
+&lt;p&gt;Bu ikkinchi paragraf.&lt;/p&gt;</code></pre>
+
+        <h2>Misol</h2>
+        <p>Quyida to'liq misol keltirilgan:</p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Sarlavha va Paragraflar&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Bu H1 darajadagi sarlavha&lt;/h1&gt;
+    &lt;p&gt;Bu esa oddiy paragraf matnidir.&lt;/p&gt;
+
+    &lt;h2&gt;Bu H2 darajadagi sarlavha&lt;/h2&gt;
+    &lt;p&gt;Yana bir paragraf matni.&lt;/p&gt;
+
+    &lt;h3&gt;Bu H3 darajadagi sarlavha&lt;/h3&gt;
+    &lt;p&gt;HTMLda sarlavhalar va paragraflar ishlatish juda oddiy.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Yuqoridagi kodni brauzeringizda sinab ko'rishingiz mumkin. Har xil darajadagi sarlavhalar va paragraflar sahifada ko'rinadi.</p>
+    </div>
+
+    <div class="button-container">
+        <a href="htmllesson2.html" class="button">Oldingi dars</a>
+        <a href="htmllesson4.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 2-Dars: O'zgaruvchilar va Ma'lumot Turlari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="doppi_logo.png" type="image/png">  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>2-Dars: O'zgaruvchilar va Ma'lumot Turlari</h1>
+        <h2>O'zgaruvchilar nima?</h2>
+        <p>
+            Python dasturlash tilida o'zgaruvchilar juda muhim rol o'ynaydi. O'zgaruvchi - bu xuddi quti kabi, unda ma'lumot (qiymat) saqlanadi. Siz qutiga turli narsalarni solishingiz mumkin, shuningdek, o'zgaruvchiga turli qiymatlar berishingiz mumkin. Misol uchun:
+        </p>
+
+        <pre><code>x = 5  # "x" degan o'zgaruvchi yaratib, unga 5 qiymatini berdik
+print(x)  # "x" ni ekranga chiqaramiz, natijada 5 chiqadi</code></pre>
+
+        <p>
+            Bu yerda <strong>x</strong> o'zgaruvchisiga 5 raqamini berdik, keyin esa <strong>print</strong> funksiyasi yordamida uni ekranga chiqaramiz.
+        </p>
+
+        <h2>O'zgaruvchilar bilan nima qilish mumkin?</h2>
+        <p>
+            O'zgaruvchilarda saqlangan qiymatlar bilan matematik amallarni bajarsak bo'ladi. Masalan:
+        </p>
+
+        <pre><code>x = 10
+y = 3
+z = x + y  # x va y ni qo'shamiz va natijani z ga beramiz
+print(z)  # z ni ekranga chiqaramiz, natijada 13 chiqadi</code></pre>
+
+        <p>
+            Bunda <strong>x</strong> ga 10, <strong>y</strong> ga 3 qiymatini berdik va ularni qo'shib, <strong>z</strong> ga saqladik. Keyin <strong>z</strong> qiymatini ekranga chiqaramiz.
+        </p>
+
+        <h2>O'zgaruvchilarning turlari</h2>
+        <p>
+            Python'da o'zgaruvchilar turli turdagi qiymatlarni saqlashi mumkin. Masalan:
+        </p>
+        <ul>
+            <li><strong>Butun sonlar</strong> (int) - masalan, 1, 2, 3.</li>
+            <li><strong>Kasr sonlar</strong> (float) - masalan, 1.5, 3.14.</li>
+            <li><strong>Matnlar</strong> (str) - masalan, "Salom", "Python".</li>
+            <li><strong>True yoki False</strong> (bool) - mantiqiy qiymatlar, masalan, "True" yoki "False".</li>
+        </ul>
+
+        <pre><code>butun_son = 10  # bu butun son
+kasr_son = 3.14  # bu kasr son
+matn = "Salom, Python!"  # bu matn
+mantiqiy = True  # bu mantiqiy qiymat
+
+print(butun_son)
+print(kasr_son)
+print(matn)
+print(mantiqiy)</code></pre>
+
+        <p>
+            Yuqoridagi misolda har xil turdagi o'zgaruvchilar bilan ishladik va ularni ekranga chiqarib ko'rdik.
+        </p>
+
+        <h2>O'zgaruvchini qayta aniqlash mumkinmi?</h2>
+        <p>
+            Ha, mumkin! Siz bir o'zgaruvchiga avval son, keyin esa matn berishingiz mumkin. Python tilida bu oddiy hol:
+        </p>
+
+        <pre><code>o_zgaruvchi = 5  # dastlab 5 ni saqlaymiz
+print(o_zgaruvchi)  # 5 chiqadi
+
+o_zgaruvchi = "Salom"  # keyin matn saqlaymiz
+print(o_zgaruvchi)  # "Salom" chiqadi</code></pre>
+
+        <p>
+            Bu misolda dastlab <strong>o_zgaruvchi</strong> ga son (5) berildi, keyin esa matn ("Salom") berildi. Python tilida o'zgaruvchilarni qayta aniqlash hech qanday muammo tug'dirmaydi.
+        </p>
+
+        <h2>Keyingi darsda nima?</h2>
+        <p>
+            Keyingi darsimizda <strong>ifodalar va shartli operatorlar</strong> bilan tanishamiz. Ular dastur ichida qaror qabul qilishga yordam beradi.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson1.html" class="button">Ortga qaytish</a>
+        <a href="lesson3.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 13-Dars: Web Dasturlash (HTML, CSS, JavaScript)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #aedff7, #f6d365);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>13-Dars: Web Dasturlash (HTML, CSS, JavaScript)</h1>
+
+        <h2>Web Dasturlash nima?</h2>
+        <p>
+            Web dasturlash — bu internetda ishlaydigan dasturlar yaratish jarayoni. Bu jarayon uch asosiy texnologiya bilan bog'liq: HTML, CSS, va JavaScript. Ushbu texnologiyalar birgalikda veb-sahifalarni yaratadi.
+        </p>
+
+        <h2>HTML: Asosiy tuzilma</h2>
+        <p>
+            HTML (HyperText Markup Language) veb-sahifalarning asosiy tuzilmasini yaratish uchun ishlatiladi. Quyidagi kod misoli veb-sahifaning asosiy HTML tuzilishini ko'rsatadi:
+        </p>
+        
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Mening Birinchi Veb Sahifam&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Xush kelibsiz!&lt;/h1&gt;
+        &lt;p&gt;Bu mening birinchi veb sahifam.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h2>CSS: Stil berish</h2>
+        <p>
+            CSS (Cascading Style Sheets) veb-sahifalarga dizayn va stil qo'shish uchun ishlatiladi. Misol uchun, biz sahifadagi matn rangini va shriftni o'zgartirishimiz mumkin:
+        </p>
+        
+        <pre><code>body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #ff5722;
+}
+
+p {
+    font-size: 18px;
+}
+</code></pre>
+
+        <h2>JavaScript: Interaktivlik qo'shish</h2>
+        <p>
+            JavaScript yordamida sahifalarga interaktivlik qo'shishingiz mumkin. Masalan, tugmani bosganingizda sahifadagi matn o'zgaradi:
+        </p>
+
+        <pre><code>&lt;button onclick="matnniOzgartir()"&gt;Bos!&lt;/button&gt;
+&lt;p id="matn"&gt;Bu matn o'zgaradi.&lt;/p&gt;
+
+&lt;script&gt;
+function matnniOzgartir() {
+    document.getElementById("matn").innerHTML = "Matn o'zgartirildi!";
+}
+&lt;/script&gt;
+</code></pre>
+
+        <h2>HTML, CSS, va JavaScript birgalikda</h2>
+        <p>
+            Web dasturlashda HTML, CSS va JavaScript birgalikda ishlaydi. HTML veb-sahifani tuzadi, CSS uni stil qiladi, JavaScript esa sahifani interaktiv qiladi.
+        </p>
+
+        <div class="image-container">
+            <img src="web-development-example.png" alt="Web Dasturlash">
+        </div>
+
+        <h2>Do'ppiDev sayti ham HTML, CSS va JavaScript yordamida yaratilgan</h2>
+        
+        <h2>Kutubxonalarni yuklab olish</h2>
+        <p>
+            Web dasturlashda ko'pincha turli JavaScript kutubxonalaridan foydalanamiz. Masalan, <code>jQuery</code> yoki <code>React</code> kabi kutubxonalarni ishlatishdan avval ularni yuklab olish kerak. Buning uchun, terminalda quyidagi buyruqlarni yozish mumkin:
+        </p>
+
+        <pre><code>// jQuery ni yuklash uchun:
+npm install jquery
+
+// React ni yuklash uchun:
+npm install react
+</code></pre>
+
+        <p>Web dasturlarini yuklab olish uchun <code>npm (Node Package Manager)</code> dan foydalanishingiz mumkin. Agar <code>npm</code> sizda o'rnatilmagan bo'lsa, <code>Node.js</code> ni o'rnatishingiz kerak bo'ladi.</p>
+
+        <h2>Terminalda ishlash</h2>
+        <p>
+            Web dasturlash jarayonida ko'pincha terminal orqali buyruqlar bajariladi. Agar sizda terminal ochilmagan bo'lsa, uni yuqoridagi darslarda ko'rsatib o'tilgan usullar bilan ochishingiz mumkin.
+        </p>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda web dasturlar uchun kichik amaliyotlar yaratamiz va bu texnologiyalarni qanday birlashtirishni o'rganamiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson12.html" class="button">Ortga qaytish</a>
+        <a href="lesson14.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

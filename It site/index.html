@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do'ppiDev - Dasturlashni O'rganing</title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="icon" href="doppi_logo.png" type="image/png">  
+</head>
+
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <img src="doppi_logo.png" alt="Do'ppiDev Logo" class="site-logo"> <!-- Logo qo‘shish -->
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="#about">Haqida</a></li>
+            <li><a href="#courses">Kurslar</a></li>
+            <li><a href="#contact">Bog'lanish</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Bosh sahifa -->
+    <header>
+        <h1>Dasturlashni O'rganing</h1>
+        <p>O'rganishni boshlang va kelajagingizni qurish uchun ilhom oling!</p>
+    </header>
+
+    <!-- Kurslar bo'limi -->
+    <section class="courses" id="courses">
+        <h2>Kurslar</h2>
+        <div class="card">
+            <img src="html-logo.png" alt="HTML Logo" class="language-logo">
+            <h3>HTML</h3>
+            <p>Web sahifalar yaratishni o'rganing</p>
+            <button onclick="startCourse('html')">Boshlash</button>
+        </div>
+        <div class="card">
+            <img src="css-logo.png" alt="CSS Logo" class="language-logo">
+            <h3>CSS</h3>
+            <p>Web sahifalarni bezashni o'rganing</p>
+            <button onclick="startCourse('css')">Boshlash</button>
+        </div>
+        <div class="card">
+            <img src="js-logo.png" alt="JavaScript Logo" class="language-logo">
+            <h3>JavaScript</h3>
+            <p>Dinamik web sahifalar yaratishni o'rganing</p>
+            <button onclick="startCourse('javascript')">Boshlash</button>
+        </div>
+    </section>
+
+    <!-- Haqida bo'limi -->
+    <section id="about">
+        <h2>Biz haqimizda</h2>
+        <p>Do'ppiDev - dasturlashni o'rganish uchun eng yaxshi joy. Biz sizga zamonaviy va interaktiv darslar taqdim etamiz 😎👩🏻‍💻🚀</p>
+    </section>
+
+    <!-- Bog'lanish bo'limi -->
+    <section id="contact">
+        <h2>Bog'lanish</h2>
+        <a href="inomjonovmuhammadamin65@gmail.com" class="contact-button">Email orqali yozing</a>
+        <a href="https://t.me/Unverseweb" target="_blank" class="contact-button">Telegramda yozing</a>
+    </section>
+
+    <!-- Barcha huquqlar himoyalangan -->
+    <footer>
+        <p>Barcha huquqlar himoyalangan. © 2024 Do'ppiDev. Maxsus yangiliklar va loyihalar uchun bizga bog'laning.</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

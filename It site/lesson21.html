@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 21-Dars: Containerization (Docker)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>21-Dars: Containerization (Docker)</h1>
+
+        <h2>1. Containerization nima?</h2>
+        <p>
+            Containerization - bu dasturiy ta'minotni va uning barcha bog'liqliklarini bitta konteynerga joylashtirish jarayoni. Bu dastur muhitini boshqa tizimlarda osonlikcha ko'chirib, ishlatishga imkon beradi. Docker - bu containerization uchun eng mashhur vositalardan biridir.
+        </p>
+
+        <h2>2. Docker o'rnatish</h2>
+        <p>
+            Docker'ni o'rnatish uchun quyidagi buyruqlarni terminalda ishlating (operatsion tizimingizga qarab farq qilishi mumkin):
+        </p>
+        <pre><code># Ubuntu/Linux tizimida Docker o'rnatish
+sudo apt update
+sudo apt install docker.io
+
+# Windows yoki Mac OS'da Docker Desktop'ni o'rnatish uchun rasmiy saytga boring:
+# https://www.docker.com/products/docker-desktop
+</code></pre>
+
+        <h2>3. Dockerfile yaratish</h2>
+        <p>
+            Docker'da dasturiy ta'minotni joylashtirish uchun Dockerfile - bu dasturiy ta'minotni qanday paketlashni ko'rsatuvchi fayl. Keling, oddiy Python dasturini Docker'ga joylashtirish jarayonini ko'rib chiqamiz.
+        </p>
+
+        <h3>Dockerfile misoli:</h3>
+        <pre><code># Dockerfile
+# Python bazasi asosida ish boshlaymiz
+FROM python:3.9
+
+# Ilova fayllarini konteynerga nusxalash
+WORKDIR /app
+COPY . /app
+
+# Bog'liqliklarni o'rnatish
+RUN pip install -r requirements.txt
+
+# Ilovani ishga tushirish
+CMD ["python", "main.py"]
+</code></pre>
+
+        <h3>Ilovani Docker'da ishga tushirish:</h3>
+        <pre><code># Dockerfile yaratgandan keyin, konteyner yaratamiz
+docker build -t mening_ilovam .
+
+# Konteynerni ishga tushiramiz
+docker run -d -p 5000:5000 mening_ilovam
+</code></pre>
+
+        <h2>4. Konteynerlarni boshqarish</h2>
+        <p>
+            Docker konteynerlarining ish holatini tekshirish uchun quyidagi buyruqlardan foydalanishingiz mumkin:
+        </p>
+        <ul>
+            <li><code>docker ps</code> - ishlayotgan konteynerlarni ko'rsatadi.</li>
+            <li><code>docker stop [container_id]</code> - konteynerni to'xtatadi.</li>
+            <li><code>docker rm [container_id]</code> - konteynerni o'chiradi.</li>
+        </ul>
+
+        <h2>Xulosa</h2>
+        <p>
+            Ushbu darsda containerization tushunchasi va Docker vositasi bilan tanishdik. Docker yordamida dasturlarni izolyatsiya qilish va ularni turli muhitlarda barqaror ishlashini ta'minlash mumkin. Bu dasturlarni tarqatish va ishlab chiqishni tezlashtiradi.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson20.html" class="button">Ortga qaytish</a>
+        <a href="index.html" class="button">Bosh sahifa</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>

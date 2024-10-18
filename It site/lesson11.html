@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 11-Dars: Asinxron Dasturlash (asyncio)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #e1f5fe, #b3e5fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #1e88e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #42a5f5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>11-Dars: Asinxron Dasturlash (asyncio)</h1>
+
+        <h2>Asinxron dasturlash nima?</h2>
+        <p>
+            Asinxron dasturlash, dasturlarni bir vaqtning o'zida bir nechta vazifalarni bajarishga imkon beradigan dasturlash usulidir. Bu, dastur bajarilishi davomida boshqa vazifalarni kutish vaqti o'rniga bajarilishini ta'minlaydi.
+        </p>
+
+        <h2>Python'da asinxron dasturlash</h2>
+        <p>
+            Python'da asinxron dasturlash uchun <code>asyncio</code> kutubxonasi ishlatiladi. Bu kutubxona asinxron vazifalarni yaratish va boshqarishga yordam beradi.
+        </p>
+
+        <h2>Asosiy tushunchalar</h2>
+        <p>
+            - <strong>Asinxron funktsiya</strong>: <code>async def</code> kalit so'zi yordamida yaratiladi. Bu funktsiya <code>await</code> operatori bilan chaqirilishi mumkin.<br>
+            - <strong>Vazifa (Task)</strong>: Asinxron funktsiyalarning bajarilishi uchun yaratilgan ob'ekt.<br>
+            - <strong>Event Loop</strong>: Asinxron funktsiyalarni boshqaruvchi mexanizm.
+        </p>
+
+        <h2>Misol: Asinxron funktsiyalar</h2>
+        <p>
+            Quyidagi misolda asinxron funktsiyalar va <code>asyncio</code> yordamida qanday ishlash ko'rsatiladi:
+        </p>
+
+        <pre><code>import asyncio
+
+async def vazifa_1():
+    print("Vazifa 1 bajarilmoqda...")
+    await asyncio.sleep(2)  # 2 soniya kutish
+    print("Vazifa 1 tugadi!")
+
+async def vazifa_2():
+    print("Vazifa 2 bajarilmoqda...")
+    await asyncio.sleep(1)  # 1 soniya kutish
+    print("Vazifa 2 tugadi!")
+
+async def asosiy_vazifa():
+    await asyncio.gather(vazifa_1(), vazifa_2())
+
+# Event loopni ishga tushirish
+asyncio.run(asosiy_vazifa())</code></pre>
+
+        <h2>Qanday qilib asinxron dasturlashdan foydalanish kerak?</h2>
+        <p>
+            Asinxron dasturlashda bir vaqtning o'zida ko'p vazifalarni bajarishga imkon beradi, bu esa dastur samaradorligini oshiradi. Siz asinxron funktsiyalarni yarating va <code>await</code> operatori yordamida ularni chaqiring.
+        </p>
+
+        <h2>Keyingi darslar</h2>
+        <p>
+            Keyingi darslarda avtomatlashtirish (pytest) haqida ma'lumot olasiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson10.html" class="button">Ortga qaytish</a>
+        <a href="lesson12.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>Barcha huquqlar himoyalangan © 2024</p>
+    </footer>
+
+</body>
+</html>

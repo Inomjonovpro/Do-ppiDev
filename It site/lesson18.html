@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 18-Dars: PIP va Kutubxonalar bilan ishlash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tepadagi bar menyusi -->
+    <nav>
+        <div class="logo">
+            <h1 class="animated-text">Do'ppiDev</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="#content">Mazmuni</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>18-Dars: PIP va Python Kutubxonalari bilan ishlash</h1>
+
+        <h2>PIP haqida</h2>
+        <p>
+            PIP - Python uchun paket menejeri bo'lib, u orqali Python kutubxonalarini o'rnatish va boshqarish mumkin. Siz Python dasturlash tilida foydalanadigan kutubxonalarni PIP orqali tez va oson o'rnatishingiz mumkin.
+        </p>
+
+        <h2>PIP yordamida kutubxonalarni o'rnatish</h2>
+        <p>
+            PIP yordamida kutubxonalarni o'rnatish uchun terminal yoki buyruq qatoriga quyidagi ko'rinishda buyruq kiritiladi:
+        </p>
+
+        <pre><code>pip install kutubxona_nom</code></pre>
+
+        <p>
+            Masalan, numpy kutubxonasini o'rnatish uchun:
+        </p>
+
+        <pre><code>pip install numpy</code></pre>
+
+        <h2>PIP yordamida o'rnatilgan kutubxonalarni ko'rish</h2>
+        <p>
+            Kompyuteringizda o'rnatilgan Python kutubxonalarini ko'rish uchun quyidagi buyruqdan foydalanishingiz mumkin:
+        </p>
+
+        <pre><code>pip list</code></pre>
+
+        <h2>Misol: NumPy bilan oddiy amallar</h2>
+        <p>
+            NumPy - bu matematik va statistik hisob-kitoblarni amalga oshirish uchun keng qo'llaniladigan Python kutubxonasi. Quyidagi misolda NumPy kutubxonasi yordamida oddiy arifmetik amallar bajariladi:
+        </p>
+
+        <pre><code>import numpy as np
+
+# NumPy yordamida massiv yaratish
+massiv = np.array([1, 2, 3, 4, 5])
+
+# Massiv elementlarini qo'shish
+print(massiv + 5)
+
+# Massivdagi elementlarning o'rtacha qiymatini hisoblash
+print(np.mean(massiv))</code></pre>
+
+        <h2>Yana qanday kutubxonalar bilan ishlash mumkin?</h2>
+        <p>
+            Quyida Python'da keng qo'llaniladigan kutubxonalar ro'yxati keltirilgan:
+        </p>
+        <ul>
+            <li><strong>pandas</strong>: Ma'lumotlarni tahlil qilish va ishlov berish uchun mo'ljallangan.</li>
+            <li><strong>matplotlib</strong>: Grafik va diagrammalar yaratish uchun ishlatiladi.</li>
+            <li><strong>scikit-learn</strong>: Mashina o'rganish modellari yaratish uchun ishlatiladi.</li>
+            <li><strong>requests</strong>: API va internet sahifalaridan ma'lumotlarni olish uchun.</li>
+            <li><strong>flask</strong> va <strong>django</strong>: Veb-ilovalar yaratish uchun.</li>
+        </ul>
+
+        <h2>Keyingi qadamlar</h2>
+        <p>
+            Endi PIP yordamida kutubxonalarni qanday o'rnatish va ularni ishlatishni o'rgandingiz. Keyingi darslarda Python yordamida ko'proq kutubxona va ularning imkoniyatlarini o'rganishni davom ettiramiz.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a href="lesson17.html" class="button">Ortga qaytish</a>
+        <a href="lesson19.html" class="button">Keyingi dars</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Do'ppiDev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
